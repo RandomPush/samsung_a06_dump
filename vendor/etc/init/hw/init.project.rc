@@ -1,0 +1,115 @@
+# MTK project .rc configure
+
+
+import /vendor/etc/init/hw/init.sec.rc
+
+on early-init
+    exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules trace_mmstat.ko
+
+on init
+    mkdir /mnt/media_rw/usbotg 0700 media_rw media_rw
+    mkdir /storage/usbotg 0700 root root
+
+# A06 code for SR-AL7160A-01-06 by gaochao at 20240320 start
+on post-fs
+    chown system system /dev/k250a
+    chmod 0660 /dev/k250a
+# A06 code for SR-AL7160A-01-06 by gaochao at 20240320 end
+# A06 code for SR-AL7160A-01-708 by gaochao at 20240403 start
+    chown system system /sys/class/k250a_node_class/k250a/k250a_node_gpio
+    chmod 0660 /sys/class/k250a_node_class/k250a/k250a_node_gpio
+# A06 code for SR-AL7160A-01-708 by gaochao at 20240403 end
+
+on post-fs-data
+
+#Camera
+    chmod 0660 /dev/MAINAF
+    chown system camera /dev/MAINAF
+
+    chmod 0660 /dev/MAINAF2
+    chown system camera /dev/MAINAF2
+
+    chmod 0660 /dev/SUBAF
+    chown system camera /dev/SUBAF
+
+    chmod 0660 /dev/GAF001AF
+    chown system camera /dev/GAF001AF
+
+    chmod 0660 /dev/DW9714AF
+    chown system camera /dev/DW9714AF
+
+    chmod 0660 /dev/LC898212AF
+    chown system camera /dev/LC898212AF
+
+    chmod 0660 /dev/BU64745GWZAF
+    chown system camera /dev/BU64745GWZAF
+
+#SMB
+    chown system system /proc/smb/ScreenComm
+    chmod 0660 /proc/smb/ScreenComm
+
+    chmod 0660 /dev/spm
+    chown system system /dev/spm
+
+
+on init
+    # Refer to http://source.android.com/devices/tech/storage/index.html
+    # It said, "Starting in Android 4.4, multiple external storage devices are surfaced to developers through
+    #           Context.getExternalFilesDirs(), Context.getExternalCacheDirs(), and Context.getObbDirs().
+    #           External storage devices surfaced through these APIs must be a semi-permanent part of the device (such as an SD card slot in a battery compartment).
+    #           Developers expect data stored in these locations to be available over long periods of time."
+    # Therefore, if the target doesn't support sd hot-plugging (Ex: the SD card slot in a battery compartment), we need to export SECONDARY_STORAGE in 'boot' section
+    #
+    # export SECONDARY_STORAGE /storage/sdcard1
+
+service fuse_usbotg /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/usbotg /storage/usbotg
+    class late_start
+    disabled
+
+# a06 code for SR-AL7160A-01-39 by wenghailong at 20240326 start
+#import silead_fingerprint
+on post-fs-data
+    mkdir /data/vendor/silead   0770 system system
+    chmod 0666 /dev/spidev1.0
+    chmod 0666 /dev/spidev0.0
+    chmod 0666 /dev/silead_fp
+    chmod 0666 /dev/silead_stub
+# a06 code for SR-AL7160A-01-39 by wenghailong at 20240326 end
+# A06 code for SR-AL7160A-01-54 by hehaoran at 20240407 start
+#import  jiiov_fingerprint
+on post-fs-data
+    mkdir /data/vendor/fingerprint/  0770 system system
+    chmod 0666 /dev/jiiov_fp
+# A06 code for SR-AL7160A-01-54 by hehaoran at 20240407 end
+# A06 code for SR-AL7160A-01-4 by hehaoran at 20240401 start
+    mkdir /data/vendor/focaltech 0660 system system
+    restorecon /data/vendor/focaltech
+    chmod 0660 /dev/focaltech_fp
+    chown system system /dev/focaltech_fp
+# A06 code for SR-AL7160A-01-4 by hehaoran at 20240401 end
+# start mmstat
+on property:sys.boot_completed=1
+    mkdir /sys/kernel/tracing/instances/mmstat 711
+    write /sys/kernel/tracing/instances/mmstat/tracing_on 0
+    write /sys/kernel/tracing/instances/mmstat/buffer_size_kb 16
+    write /sys/kernel/tracing/instances/mmstat/events/mmstat/enable 1
+    write /sys/kernel/tracing/instances/mmstat/tracing_on 1
+
+# A06 code for AL7160A-7 by gaojun at 20240319 start
+on boot
+    rm /efs/FactoryApp/batt_discharge_level
+    symlink /sys/class/power_supply/battery/batt_discharge_level /efs/FactoryApp/batt_discharge_level
+    chown system system /efs/FactoryApp/batt_discharge_level
+    chmod 0664 /efs/FactoryApp/batt_discharge_level
+# A06 code for AL7160A-7 by gaojun at 20240319 end
+# A06 code for AL7160A-102 by qiushangjie at 20240426 start
+    chown system system /sys/class/sensor_usertest/sar_node/dumpinfo
+# A06 code for AL7160A-102 by qiushangjie at 20240426 end
+# A06 code for AL7160A-3615 by chenweibing at 20240625 start
+    chown system system /efs/FactoryApp/plantpr
+    chmod 0664 /efs/FactoryApp/plantpr
+# A06 code for AL7160A-3615 by chenweibing at 20240625 end
+# A06 code for AL7160A-102 by qiushangjie at 20240521 start
+    chmod 0666 /sys/class/sensor_usertest/sar_node/usercali
+    chown system system /sys/class/sensor_usertest/sar_node/usercali
+# A06 code for AL7160A-102 by qiushangjie at 20240521 end

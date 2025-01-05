@@ -1,0 +1,38 @@
+{
+  "name": "Food",
+  "detail": [
+    {
+      "name":"Warm",
+      "previewid": 200,
+      "red": 218,
+      "green": 197,
+      "blue": 142,
+      "brightness": 20,
+      "saturation": 60,
+      "contrast": 50,
+      "exposure": 0
+    },
+    {
+      "name": "Cool",
+      "previewid": 201,
+      "red": 155,
+      "green": 170,
+      "blue": 189,
+      "brightness": 20,
+      "saturation": 60,
+      "contrast": 50,
+      "exposure": 0
+    },
+    {
+      "name": "Mask",
+      "previewid": 202,
+      "red": 0,
+      "green": 0,
+      "blue": 0,
+      "brightness": 5,
+      "saturation": 60,
+      "contrast": 50,
+      "exposure": 0
+    }
+  ]
+}

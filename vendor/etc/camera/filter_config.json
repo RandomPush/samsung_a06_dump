@@ -1,0 +1,93 @@
+{
+  "name": "Filter",
+  "detail": [
+    {
+      "name":"Warm",
+      "previewid": 100,
+      "red": 255,
+      "green": 230,
+      "blue": 221,
+      "brightness": 3,
+      "saturation": 60,
+      "contrast": 50,
+      "exposure": 0
+    },
+    {
+      "name": "Cool",
+      "previewid": 101,
+      "red": 241,
+      "green": 251,
+      "blue": 246,
+      "brightness": 5,
+      "saturation": 60,
+      "contrast": 50,
+      "exposure": 0
+    },
+    {
+      "name": "Frosty",
+      "previewid": 102,
+      "red": 255,
+      "green": 255,
+      "blue": 255,
+      "brightness": 4,
+      "saturation": 50,
+      "contrast": 50,
+      "exposure": 0
+    },
+    {
+      "name": "Blossom",
+      "previewid": 103,
+      "red": 255,
+      "green": 243,
+      "blue": 247,
+      "brightness": 0,
+      "saturation": 60,
+      "contrast": 50,
+      "exposure": 0
+    },
+    {
+      "name": "Faded",
+      "previewid": 104,
+      "red": 255,
+      "green": 255,
+      "blue": 255,
+      "brightness": 10,
+      "saturation": 50,
+      "contrast": 50,
+      "exposure": 3
+    },
+    {
+      "name": "Soft",
+      "previewid": 105,
+      "red": 255,
+      "green": 230,
+      "blue": 220,
+      "brightness": 15,
+      "saturation": 60,
+      "contrast": 50,
+      "exposure": 0
+    },
+    {
+      "name": "Grayscale",
+      "previewid": 106,
+      "red": 255,
+      "green": 255,
+      "blue": 255,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 50,
+      "exposure": 0
+    },
+    {
+      "name": "Classic",
+      "previewid": 107,
+      "red": 255,
+      "green": 240,
+      "blue": 230,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 80,
+      "exposure": 0
+    }
+  ]
+}

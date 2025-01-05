@@ -1,0 +1,5 @@
+service vendor_anc_ext /vendor/bin/hw/vendor.anc.hardware.fingerprintext@1.0-service
+    class hal
+    user system
+    group system input
+    seclabel u:r:hal_fingerprint_default:s0

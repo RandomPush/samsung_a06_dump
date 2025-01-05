@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+供数：
+back_main_camera:a0601lybacks5kjn1_mipi_raw:HQ70201001FZ0
+back_main_camera:a0602xlbacks5kjn1_mipi_raw:HQ70201001G20
+back_main_camera:a0603txdbacks5kjn1_mipi_raw:HQ70201001G00
+back_main_camera:a0604xlbacks5kjn1_mipi_raw:HQ70201001GE0
+back_main_camera:a0605ofbacks5kjn1_mipi_raw:HQ70201001K20
+front_main_camera:a0601ddfrontsc820cs_mipi_raw:HQ70201001GU0
+front_main_camera:a0602cxtfrontgc08a8_mipi_raw:HQ70201001GF0
+front_main_camera:a0603ddfrontmt811_mipi_raw:HQ70201001GV0
+front_main_camera:a0604xlfrontmt811_mipi_raw:HQ70201001GD0
+front_main_camera:a0605ddfrontsc820cs_mipi_raw:HQ70201001K10
+front_main_camera:a0606ddfrontmt811_mipi_raw:HQ70201001GV0
+front_main_camera:a0607xlfrontmt811_mipi_raw:HQ70201001GD0
+back_aux1_camera:a0601cxtdepthgc02m1b_mipi_raw:HQ70201001G50
+back_aux1_camera:a0602wxdepthc2519_mipi_raw:HQ70201001GZ0
+back_aux1_camera:a0603cxtdepthbf2257cs_mipi_raw:HQ70201001G60
+back_aux1_camera:a0604wxdepthsc201cs_mipi_raw:HQ70201001J80
+
+-->
+<!-- A06 code for AL7160A-3691 by chenweibing at 20240628 start -->
+<Sensors>
+    <Item back_main_camera="a0601lybacks5kjn1_mipi_raw:HQ70201001FZ0"  back_aux1_camera= "a0601cxtdepthgc02m1b_mipi_raw:HQ70201001G50" filepath="/vendor/lib/dualcali_golden_01ly_01cxt.data"></Item>
+    <Item back_main_camera="a0601lybacks5kjn1_mipi_raw:HQ70201001FZ0"  back_aux1_camera= "a0602wxdepthc2519_mipi_raw:HQ70201001GZ0" filepath="/vendor/lib/dualcali_golden_01ly_02wx.data"></Item>
+    <Item back_main_camera="a0601lybacks5kjn1_mipi_raw:HQ70201001FZ0"  back_aux1_camera= "a0603cxtdepthbf2257cs_mipi_raw:HQ70201001G60" filepath="/vendor/lib/dualcali_golden_01ly_03cxt.data"></Item>
+    <Item back_main_camera="a0601lybacks5kjn1_mipi_raw:HQ70201001FZ0"  back_aux1_camera= "a0604wxdepthsc201cs_mipi_raw:HQ70201001J80" filepath="/vendor/lib/dualcali_golden_01ly_04wx.data"></Item>
+    <Item back_main_camera="a0602xlbacks5kjn1_mipi_raw:HQ70201001G20"  back_aux1_camera= "a0601cxtdepthgc02m1b_mipi_raw:HQ70201001G50" filepath="/vendor/lib/dualcali_golden_02xl_01cxt.data"></Item>
+    <Item back_main_camera="a0602xlbacks5kjn1_mipi_raw:HQ70201001G20"  back_aux1_camera= "a0602wxdepthc2519_mipi_raw:HQ70201001GZ0" filepath="/vendor/lib/dualcali_golden_02xl_02wx.data"></Item>
+    <Item back_main_camera="a0602xlbacks5kjn1_mipi_raw:HQ70201001G20"  back_aux1_camera= "a0603cxtdepthbf2257cs_mipi_raw:HQ70201001G60" filepath="/vendor/lib/dualcali_golden_02xl_03cxt.data"></Item>
+    <Item back_main_camera="a0602xlbacks5kjn1_mipi_raw:HQ70201001G20"  back_aux1_camera= "a0604wxdepthsc201cs_mipi_raw:HQ70201001J80" filepath="/vendor/lib/dualcali_golden_02xl_04wx.data"></Item>
+    <Item back_main_camera="a0603txdbacks5kjn1_mipi_raw:HQ70201001G00"  back_aux1_camera= "a0601cxtdepthgc02m1b_mipi_raw:HQ70201001G50" filepath="/vendor/lib/dualcali_golden_03txd_01cxt.data"></Item>
+    <Item back_main_camera="a0603txdbacks5kjn1_mipi_raw:HQ70201001G00"  back_aux1_camera= "a0602wxdepthc2519_mipi_raw:HQ70201001GZ0" filepath="/vendor/lib/dualcali_golden_03txd_02wx.data"></Item>
+    <Item back_main_camera="a0603txdbacks5kjn1_mipi_raw:HQ70201001G00"  back_aux1_camera= "a0603cxtdepthbf2257cs_mipi_raw:HQ70201001G60" filepath="/vendor/lib/dualcali_golden_03txd_03cxt.data"></Item>
+    <Item back_main_camera="a0603txdbacks5kjn1_mipi_raw:HQ70201001G00"  back_aux1_camera= "a0604wxdepthsc201cs_mipi_raw:HQ70201001J80" filepath="/vendor/lib/dualcali_golden_03txd_04wx.data"></Item>
+    <Item back_main_camera="a0604xlbacks5kjn1_mipi_raw:HQ70201001GE0"  back_aux1_camera= "a0601cxtdepthgc02m1b_mipi_raw:HQ70201001G50" filepath="/vendor/lib/dualcali_golden_04xl_01cxt.data"></Item>
+    <Item back_main_camera="a0604xlbacks5kjn1_mipi_raw:HQ70201001GE0"  back_aux1_camera= "a0602wxdepthc2519_mipi_raw:HQ70201001GZ0" filepath="/vendor/lib/dualcali_golden_04xl_02wx.data"></Item>
+    <Item back_main_camera="a0604xlbacks5kjn1_mipi_raw:HQ70201001GE0"  back_aux1_camera= "a0603cxtdepthbf2257cs_mipi_raw:HQ70201001G60" filepath="/vendor/lib/dualcali_golden_04xl_03cxt.data"></Item>
+    <Item back_main_camera="a0604xlbacks5kjn1_mipi_raw:HQ70201001GE0"  back_aux1_camera= "a0604wxdepthsc201cs_mipi_raw:HQ70201001J80" filepath="/vendor/lib/dualcali_golden_04xl_04wx.data"></Item>
+    <Item back_main_camera="a0605ofbacks5kjn1_mipi_raw:HQ70201001K20"  back_aux1_camera= "a0601cxtdepthgc02m1b_mipi_raw:HQ70201001G50" filepath="/vendor/lib/dualcali_golden_05of_01cxt.data"></Item>
+    <Item back_main_camera="a0605ofbacks5kjn1_mipi_raw:HQ70201001K20"  back_aux1_camera= "a0602wxdepthc2519_mipi_raw:HQ70201001GZ0" filepath="/vendor/lib/dualcali_golden_05of_02wx.data"></Item>
+    <Item back_main_camera="a0605ofbacks5kjn1_mipi_raw:HQ70201001K20"  back_aux1_camera= "a0603cxtdepthbf2257cs_mipi_raw:HQ70201001G60" filepath="/vendor/lib/dualcali_golden_05of_03cxt.data"></Item>
+    <Item back_main_camera="a0605ofbacks5kjn1_mipi_raw:HQ70201001K20"  back_aux1_camera= "a0604wxdepthsc201cs_mipi_raw:HQ70201001J80" filepath="/vendor/lib/dualcali_golden_05of_04wx.data"></Item>
+</Sensors>
+<!-- A06 code for AL7160A-3691 by chenweibing at 20240628 end -->
