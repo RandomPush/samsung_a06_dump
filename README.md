@@ -1,0 +1,14 @@
+# a06xx-user 14 UP1A.231005.007 A065FXXS2AXJ2 release-keys
+- manufacturer: samsung
+- platform: mt6768
+- codename: a06
+- flavor: a06xx-user
+- release: 14
+- id: UP1A.231005.007
+- incremental: A065FXXS2AXJ2
+- tags: release-keys
+- fingerprint: samsung/a06xx/a06:12/SP1A.210812.016/A065FXXS2AXJ2:user/release-keys
+- is_ab: false
+- brand: samsung
+- branch: a06xx-user-14-UP1A.231005.007-A065FXXS2AXJ2-release-keys
+- repo: samsung_a06_dump
